@@ -2,10 +2,10 @@
 
 ## Phase 1 – Rust Server Skeleton
 
-- [ ] initialize Rust server
-- [ ] add Axum HTTP server
-- [ ] basic API endpoint for chat
-- [ ] configuration system
+- [x] initialize Rust server
+- [x] add Axum HTTP server
+- [x] basic API endpoint for chat
+- [x] configuration system
 
 ## Phase 2 – Python Worker
 
