@@ -16,7 +16,7 @@ use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 #[tokio::main]
 async fn main() -> Result<(), ServerError> {
     // Parse Command line args
-    let cli_args = Cli::parse();
+    let cli_args = Cli::parse()?;
 
     // load config
     let server_config = ServerConfig::load_config(Path::new(&cli_args.config_fp))?;

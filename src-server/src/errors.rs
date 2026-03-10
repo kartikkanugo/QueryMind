@@ -3,6 +3,9 @@ use thiserror::Error;
 
 #[derive(Debug, Error)]
 pub enum ServerError {
+    #[error("Invalid CLI Args: {0}")]
+    InvalidCliArgs(#[from] clap::Error),
+
     #[error("Configuration error: {0}")]
     Config(#[from] ConfigError),
 
@@ -11,9 +14,6 @@ pub enum ServerError {
 
     #[error("Network error: {0}")]
     Network(String),
-
-    #[error("Invalid request: {0}")]
-    InvalidRequest(String),
 
     #[error("Internal server error")]
     Internal,
