@@ -5,12 +5,13 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch",
+      "name": "Debug",
       "type": "lldb",
       "request": "launch",
       "program": "${workspaceRoot}/src-server/target/debug/src-server.exe",
       "args": ["-c", "${workspaceRoot}/env.toml"],
-      "cwd": "${workspaceRoot}"
+      "cwd": "${workspaceRoot}",
+      "preLaunchTask": "cargo-build-task"
     }
   ]
 }

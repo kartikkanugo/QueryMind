@@ -7,7 +7,6 @@ mod routes;
 use crate::{conf::ServerConfig, errors::ServerError};
 use axum::Router;
 
-use clap::Parser;
 use cliargs::Cli;
 use std::path::Path;
 use tracing::info;
