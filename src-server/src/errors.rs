@@ -9,8 +9,8 @@ pub enum ServerError {
     #[error("Configuration error: {0}")]
     Config(#[from] ConfigError),
 
-    #[error("IO error: {0}")]
-    Io(#[from] std::io::Error),
+    #[error("Server IO error: {0}")]
+    ServerIO(#[from] std::io::Error),
 
     #[error("Network error: {0}")]
     Network(String),

@@ -3,9 +3,9 @@ mod conf;
 mod errors;
 mod models;
 mod routes;
+mod server;
 
-use crate::{conf::ServerConfig, errors::ServerError};
-use axum::Router;
+use crate::{conf::ServerConfig, errors::ServerError, server::serve_query_mind};
 
 use cliargs::Cli;
 use std::path::Path;
@@ -27,16 +27,7 @@ async fn main() -> Result<(), ServerError> {
         .init();
 
     info!("{}", server_config);
-    // build router
-    let app = Router::new().merge(routes::chat::router());
-
-    let addr = format!("{}:{}", server_config.address, server_config.port);
-
-    info!("Server running on {}", addr);
-
-    let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
-
-    axum::serve(listener, app).await.unwrap();
+    serve_query_mind(&server_config.address, &server_config.port).await?;
 
     Ok(())
 }

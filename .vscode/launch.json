@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug",
+      "name": "src-server-debug",
       "type": "lldb",
       "request": "launch",
       "program": "${workspaceRoot}/src-server/target/debug/src-server.exe",

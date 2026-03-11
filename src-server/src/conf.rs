@@ -24,7 +24,7 @@ impl fmt::Display for ServerConfig {
         write!(
             f,
             "ServerConfig {{address: {}, port: {}, log_lvl: {}}}",
-            self.address, self.port, self.port
+            self.address, self.port, self.log_lvl
         )
     }
 }
