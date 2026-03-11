@@ -5,13 +5,10 @@ description = "Async Python TCP worker service"
 authors = [{ name = "Kartik" }]
 requires-python = ">=3.13"
 
-dependencies = [
-    "pandas>=3.0.1",
-    "pydantic>=2.12.5",
-]
+dependencies = ["pandas>=3.0.1", "pydantic>=2.12.5"]
 
 [project.scripts]
-pyworker = "pyworker.server:main"
+pyworker = "pyworker:main"
 
 [build-system]
 requires = ["setuptools>=68", "wheel"]

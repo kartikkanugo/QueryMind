@@ -5,6 +5,15 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Python Debugger: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceRoot}",
+      "args": ["-c", "${workspaceRoot}/env.toml"]
+    },
+    {
       "name": "src-server-win",
       "type": "lldb",
       "request": "launch",
