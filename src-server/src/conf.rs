@@ -1,5 +1,5 @@
 use crate::errors::ServerError;
-use config::{Config, File, FileFormat, FileSourceFile};
+use config::{Config, File};
 use serde::Deserialize;
 use std::fmt;
 use std::path::Path;

@@ -9,7 +9,16 @@
       "type": "lldb",
       "request": "launch",
       "program": "${workspaceRoot}/src-server/target/debug/src-server.exe",
-      "args": ["-c", "${workspaceRoot}/env.toml"],
+      "args": ["-c", "env.toml"],
+      "cwd": "${workspaceRoot}",
+      "preLaunchTask": "cargo-build-task"
+    },
+    {
+      "name": "src-server-linux",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceRoot}/src-server/target/debug/src-server",
+      "args": ["-c", "env.toml"],
       "cwd": "${workspaceRoot}",
       "preLaunchTask": "cargo-build-task"
     }
