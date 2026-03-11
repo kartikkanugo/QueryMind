@@ -1,0 +1,24 @@
+[project]
+name = "pyworker"
+version = "0.1.0"
+description = "Async Python TCP worker service"
+authors = [{ name = "Kartik" }]
+requires-python = ">=3.13"
+
+dependencies = [
+    "pandas>=3.0.1",
+    "pydantic>=2.12.5",
+]
+
+[project.scripts]
+pyworker = "pyworker.server:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
