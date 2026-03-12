@@ -26,6 +26,7 @@ async fn main() -> Result<(), ServerError> {
         .with(tracing_subscriber::fmt::layer())
         .init();
 
+    // this is where the normal internet server is running
     info!("{}", server_config);
     serve_query_mind(&server_config.address, &server_config.port).await?;
 
